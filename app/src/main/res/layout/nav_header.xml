@@ -10,7 +10,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:text="943217258@qq.com"
+        android:text="天气预报"
         android:textSize="14sp"
         android:textColor="#FFF"/>
 
@@ -19,7 +19,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_above="@id/mail"
-        android:text="一个名字"
+        android:text="设置"
         android:textSize="14sp"
         android:textColor="#FFF"/>
 </RelativeLayout>
