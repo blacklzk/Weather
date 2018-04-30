@@ -123,8 +123,8 @@ public class WeatherActivity extends AppCompatActivity {
                 requestWeather(weatherId);
             }else{
                 //没选过城市也没有缓存就是第一次安装应用
-                weatherId = "CN101091101";
-                Toast.makeText(WeatherActivity.this, "没有设置城市,默认显示秦皇岛", Toast.LENGTH_SHORT);
+                weatherId = "CN101010100";
+                Toast.makeText(WeatherActivity.this, "没有设置城市,默认显示北京", Toast.LENGTH_SHORT);
                 requestWeather(weatherId);
             }
         }
@@ -138,9 +138,9 @@ public class WeatherActivity extends AppCompatActivity {
                 if(weatherId != null) {
                     requestWeather(weatherId);
                 }else {
-                    weatherId = "CN101091101";
+                    weatherId = "CN101010100";
                     requestWeather(weatherId);
-                    Toast.makeText(WeatherActivity.this,"没有设置城市,默认显示秦皇岛",Toast.LENGTH_SHORT);
+                    Toast.makeText(WeatherActivity.this,"没有设置城市,默认显示北京",Toast.LENGTH_SHORT);
                     loadBingPic();
                 }
             }

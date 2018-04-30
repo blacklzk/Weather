@@ -30,10 +30,8 @@ import xbt.exp20.db.Province;
 import xbt.exp20.util.HttpUtil;
 import xbt.exp20.util.Utility;
 
-/**
- * Created by xbt on 2017/9/8.
- * 用于遍历省市县数据的碎片
- */
+
+ // 用于遍历省市县数据的碎片
 
 public class ChooseAreaFragment extends android.support.v4.app.Fragment {
 
@@ -55,39 +53,33 @@ public class ChooseAreaFragment extends android.support.v4.app.Fragment {
 
     private List<String> dataList  = new ArrayList<>();
 
-    /**
-     * 省列表
-     */
+
+      //省列表
     private List<Province> provinceList;
 
-    /**
-     * 市列表
-     */
+
+     // 市列表
     private List<City> cityList;
 
-    /**
-     * 县列表
-     */
+
+    //县列表
     private List<County> countyList;
 
-    /**
-     * 选中的省份
-     */
+
+     //选中的省份
     private Province selectedProvince;
 
-    /**
-     * 选中的城市
-     */
+
+     //选中的城市
     private City selectedCity;
 
-    /**
-     * 选中的县
-     */
+
+    //选中的县
     private County selectedCounty;
 
-    /**
-     * 当前被选中的级别
-     */
+
+     // 当前被选中的级别
+
     private int currentLevel;
 
     @Nullable
@@ -142,9 +134,8 @@ public class ChooseAreaFragment extends android.support.v4.app.Fragment {
         queryProvinces();//活动刚启动，没有选取省市县就直接展示全国34个省
     }
 
-    /**
-     * 查询全国所有的省，优先从数据库查询，如果没有查到再去服务器上查询
-     */
+
+     // 查询全国所有的省，优先从数据库查询，如果没有查到再去服务器上查询
     private void queryProvinces(){
         titleText.setText("中国");
         backButton.setVisibility(View.GONE);
@@ -163,9 +154,7 @@ public class ChooseAreaFragment extends android.support.v4.app.Fragment {
         }
     }
 
-    /**
-     * 查询全国所有的市，优先从数据库查询，如果没有查到再去服务器上查询
-     */
+     //查询全国所有的市，优先从数据库查询，如果没有查到再去服务器上查询
     private void queryCities(){
         titleText.setText(selectedProvince.getProvinceName());
         backButton.setVisibility(View.VISIBLE);
@@ -185,9 +174,8 @@ public class ChooseAreaFragment extends android.support.v4.app.Fragment {
         }
     }
 
-    /**
-     * 查询全国所有的县，优先从数据库查询，如果没有查到再去服务器上查询
-     */
+
+     // 查询全国所有的县，优先从数据库查询，如果没有查到再去服务器上查询
     private void queryCounties(){
         titleText.setText(selectedCity.getCityName());
         backButton.setVisibility(View.VISIBLE);
@@ -208,9 +196,8 @@ public class ChooseAreaFragment extends android.support.v4.app.Fragment {
         }
     }
 
-    /**
-     * 根据传入的地址和类型从服务器上查询省市县的数据
-     */
+
+    //根据传入的地址和类型从服务器上查询省市县的数据
     private void queryFromServer(String address, final String type){
 //        mProgress.setVisibility(View.VISIBLE);
         HttpUtil.sendOkHttpRequest(address, new Callback() {
